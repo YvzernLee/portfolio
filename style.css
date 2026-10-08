@@ -1,0 +1,120 @@
+body{
+    background-color:lightgrey;
+    margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+         
+            color: #222;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+     main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+  nav {
+            background-color: #222;
+            padding: 15px;
+            position: sticky;
+            top:0;
+            z-index: 5;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav li {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #00bfff;
+        }
+
+        nav i {
+            margin-right: 6px;
+        }
+
+
+        /* =========================
+           HEADINGS
+           ========================= */
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #333;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+
+        /* =========================
+           IMAGES
+           ========================= */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE DESIGN
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            nav ul,
+            nav li {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            main {
+                padding: 15px;
+            }
+        }
