@@ -4,41 +4,83 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Page title and SEO -->
     <title>Yvzern | Gamer Portfolio and Student Website</title>
 
-    <meta name="description"
-        content="Welcome to Yvzern's personal portfolio. Explore favorite games, hobbies, and education at Qosmo International School.">
+    <meta
+        name="description"
+        content="Welcome to Yvzern's personal portfolio. Explore favorite games, hobbies, and education at Qosmo International School."
+    >
 
-    <meta name="keywords"
-        content="Yvzern, gamer portfolio, student portfolio, gaming, Qosmo International School">
+    <meta
+        name="keywords"
+        content="Yvzern, gamer portfolio, student portfolio, gaming, favorite games, Qosmo International School"
+    >
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Yvzern">
     <meta name="theme-color" content="#111827">
     <meta name="apple-mobile-web-app-title" content="Yvzern">
 
+    <!-- Open Graph: social media previews -->
     <meta property="og:title" content="Yvzern | Gamer Portfolio">
-    <meta property="og:description"
-        content="Explore Yvzern's personal portfolio, favorite games, hobbies, and education.">
+
+    <meta
+        property="og:description"
+        content="Explore Yvzern's personal portfolio, favorite games, hobbies, and education."
+    >
+
     <meta property="og:type" content="website">
     <meta property="og:image" content="images.png">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images.png">
     <link rel="apple-touch-icon" href="images.png">
 
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Font Awesome icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav aria-label="Main navigation">
-        <ul>
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+    <nav class="navbar" aria-label="Main navigation">
+
+        <!-- Website logo -->
+        <a href="#home" class="nav-logo">
+            YVZERN<span>.</span>
+        </a>
+
+        <!-- Hamburger button -->
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="nav-links">
+
             <li>
                 <a href="#home">
                     <i class="fa-solid fa-house" aria-hidden="true"></i>
@@ -62,20 +104,31 @@
 
             <li>
                 <a href="#education">
-                    <i class="fa-solid fa-graduation-cap"
-                        aria-hidden="true"></i>
+                    <i
+                        class="fa-solid fa-graduation-cap"
+                        aria-hidden="true"
+                    ></i>
                     Education
                 </a>
             </li>
+
         </ul>
+
     </nav>
 
-    <!-- MAIN CONTENT -->
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
     <main>
 
-        <!-- HOME -->
+        <!-- HOME / HERO SECTION -->
         <header id="home" class="hero">
-            <p class="eyebrow">PLAYER PROFILE: YVZERN</p>
+
+            <p class="eyebrow">
+                PLAYER PROFILE: YVZERN
+            </p>
 
             <h1>
                 Achievement Unlock!
@@ -89,12 +142,21 @@
 
             <a href="#introduction" class="explore-button">
                 Explore My World
-                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                <i
+                    class="fa-solid fa-arrow-down"
+                    aria-hidden="true"
+                ></i>
             </a>
+
         </header>
 
-        <!-- INTRODUCTION -->
+
+        <!-- ========================================
+             INTRODUCTION SECTION
+        ========================================= -->
+
         <section id="introduction" class="panel">
+
             <h2>
                 <i class="fa-solid fa-user" aria-hidden="true"></i>
                 Introduction
@@ -111,10 +173,16 @@
                 Hello! My name is Yvzern. I like to play games,
                 and I am a student who enjoys learning and having fun.
             </p>
+
         </section>
 
-        <!-- HOBBY -->
+
+        <!-- ========================================
+             HOBBY SECTION
+        ========================================= -->
+
         <section id="game" class="panel">
+
             <h2>
                 <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
                 My Favorite Game
@@ -131,17 +199,26 @@
                 Gaming is one of my favorite hobbies. I enjoy
                 playing games and discovering new adventures.
             </p>
+
         </section>
 
-        <!-- EDUCATION -->
+
+        <!-- ========================================
+             EDUCATION SECTION
+        ========================================= -->
+
         <section id="education" class="panel">
+
             <h2>
-                <i class="fa-solid fa-graduation-cap"
-                    aria-hidden="true"></i>
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
                 Education
             </h2>
 
             <div class="school-card">
+
                 <img
                     class="school-logo"
                     src="Qosmo-logo-square.png"
@@ -150,24 +227,94 @@
                 >
 
                 <div class="school-info">
-                    <h3>Qosmo International School</h3>
+
+                    <h3>
+                        Qosmo International School
+                    </h3>
+
                     <p class="student-level">
-                        <i class="fa-solid fa-book-open"
-                            aria-hidden="true"></i>
+                        <i
+                            class="fa-solid fa-book-open"
+                            aria-hidden="true"
+                        ></i>
                         Year 4 Student
                     </p>
+
                 </div>
+
             </div>
+
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
     <footer>
+
         <p>
             Yvzern &copy; 2026. All rights reserved.
         </p>
+
     </footer>
 
+
+    <!-- ========================================
+         HAMBURGER MENU JAVASCRIPT
+    ========================================= -->
+
+    <script>
+        // Get the navigation elements
+        const navbar = document.querySelector(".navbar");
+        const menuToggle = document.querySelector("#menu-toggle");
+        const navLinks = document.querySelectorAll("#nav-links a");
+
+        // Open and close the hamburger menu
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navbar.classList.toggle("menu-open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+        });
+
+        // Close the menu after selecting a navigation link
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("menu-open");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+            });
+        });
+
+        // Close the menu when resizing to desktop width
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) {
+                navbar.classList.remove("menu-open");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+            }
+        });
+    </script>
+
 </body>
+
 </html>

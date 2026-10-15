@@ -37,67 +37,146 @@ a:focus-visible {
 
 
 /* ========================================
-   NAVIGATION
+   NAVIGATION BAR
 ======================================== */
 
-nav {
+.navbar {
     position: sticky;
     top: 0;
     z-index: 100;
 
-    background-color: #111827;
-    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    width: 100%;
+    padding: 12px 24px;
+
+    background-color: #111827;
     border-bottom: 2px solid #00bfff;
     box-shadow: 0 4px 15px rgb(0 0 0 / 12%);
 }
 
-nav ul {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0;
+/* Website logo */
 
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+.nav-logo {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-nav li {
+.nav-logo span {
+    color: #00bfff;
+}
+
+/* Navigation links on laptops and desktops */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
     margin: 0;
     padding: 0;
 }
 
-nav a {
+.nav-links a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 
     min-height: 44px;
-    padding: 10px 16px;
+    padding: 10px 12px;
 
     color: #f9fafb;
-    text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
+    text-decoration: none;
 
     border-radius: 8px;
+
     transition:
-        color 0.2s ease,
-        background-color 0.2s ease;
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
-nav a:hover,
-nav a:focus-visible {
+.nav-links a i {
+    color: #00bfff;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
     color: #00bfff;
     background-color: #263449;
 }
 
-nav i {
-    color: #00bfff;
+/* Hamburger button */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 46px;
+    height: 44px;
+    padding: 8px;
+
+    background: transparent;
+    border: 1px solid #374151;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: #00bfff;
+    border-radius: 2px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #263449;
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid #00bfff;
+    outline-offset: 3px;
+}
+
+/* Hamburger transforms into an X when opened */
+
+.navbar.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 
@@ -108,6 +187,7 @@ nav i {
 main {
     width: 100%;
     max-width: 1050px;
+
     margin: 0 auto;
     padding: 32px 24px;
 }
@@ -122,7 +202,7 @@ main {
     margin-bottom: 28px;
 
     text-align: center;
-    color: white;
+    color: #ffffff;
 
     background:
         radial-gradient(
@@ -134,17 +214,22 @@ main {
 
     border: 1px solid #34465d;
     border-radius: 20px;
+
     box-shadow: 0 10px 30px rgb(17 24 39 / 12%);
 }
 
+/* Small label above the heading */
+
 .eyebrow {
     margin: 0 0 12px;
-    color: #00bfff;
 
+    color: #00bfff;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
+
+/* Main heading */
 
 h1 {
     max-width: 850px;
@@ -152,6 +237,7 @@ h1 {
 
     font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.2;
+
     overflow-wrap: anywhere;
 }
 
@@ -161,12 +247,17 @@ h1 span {
     color: #00bfff;
 }
 
+/* Hero description */
+
 .hero-description {
     max-width: 650px;
     margin: 0 auto 28px;
+
     color: #e5e7eb;
     font-size: clamp(1rem, 2vw, 1.15rem);
 }
+
+/* Explore button */
 
 .explore-button {
     display: inline-flex;
@@ -179,6 +270,7 @@ h1 span {
 
     color: #111827;
     background-color: #00bfff;
+
     border: 2px solid #00bfff;
     border-radius: 8px;
 
@@ -217,9 +309,10 @@ h1 span {
 
     box-shadow: 0 6px 20px rgb(31 41 55 / 5%);
 
-    /* Keeps anchored headings visible below sticky nav */
     scroll-margin-top: 100px;
 }
+
+/* Section headings */
 
 h2 {
     margin: 0 0 22px;
@@ -237,13 +330,18 @@ h2 i {
     color: #009bd1;
 }
 
+/* Section paragraphs */
+
 .panel p {
     margin-bottom: 0;
     font-size: 1.05rem;
 }
 
+/* Subheadings */
+
 h3 {
     margin: 0 0 8px;
+
     color: #1f2937;
     font-size: clamp(1.15rem, 2.5vw, 1.4rem);
     line-height: 1.4;
@@ -251,7 +349,7 @@ h3 {
 
 
 /* ========================================
-   CONTENT IMAGES
+   INTRODUCTION AND HOBBY IMAGES
 ======================================== */
 
 .content-image {
@@ -264,13 +362,13 @@ h3 {
     object-fit: cover;
     object-position: center;
 
-    border-radius: 12px;
     background-color: #e5e7eb;
+    border-radius: 12px;
 }
 
 
 /* ========================================
-   EDUCATION
+   EDUCATION SECTION
 ======================================== */
 
 .school-card {
@@ -285,17 +383,23 @@ h3 {
     border-radius: 12px;
 }
 
+/* School logo */
+
 .school-logo {
     flex: 0 0 120px;
+
     width: 120px;
     height: 120px;
 
-    object-fit: contain;
     padding: 8px;
 
-    background-color: white;
+    object-fit: contain;
+
+    background-color: #ffffff;
     border-radius: 12px;
 }
+
+/* School information */
 
 .school-info {
     min-width: 0;
@@ -321,8 +425,8 @@ footer {
 
     text-align: center;
     color: #e5e7eb;
-    background-color: #111827;
 
+    background-color: #111827;
     border-top: 2px solid #00bfff;
 }
 
@@ -333,27 +437,75 @@ footer p {
 
 
 /* ========================================
-   TABLETS
-   601px to 900px
+   TABLETS AND MOBILE
+   768px and below
 ======================================== */
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 768px) {
+
+    /* Sticky navigation spacing */
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 16px;
+    }
+
+    /* Show hamburger button */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hide links until the menu is opened */
+
+    .nav-links {
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+
+        width: 100%;
+        padding: 12px 0 4px;
+    }
+
+    /* Show links when opened */
+
+    .navbar.menu-open .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: flex-start;
+
+        width: 100%;
+        min-height: 46px;
+        padding: 12px 14px;
+
+        font-size: 1rem;
+    }
+}
+
+
+/* ========================================
+   TABLETS
+   601px to 768px
+======================================== */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
     main {
         max-width: 800px;
         padding: 26px 22px;
-    }
-
-    nav {
-        padding: 10px 12px;
-    }
-
-    nav ul {
-        gap: 4px;
-    }
-
-    nav a {
-        padding: 10px 12px;
-        font-size: 0.95rem;
     }
 
     .hero {
@@ -379,43 +531,21 @@ footer p {
 ======================================== */
 
 @media (max-width: 600px) {
+
     html {
-        scroll-padding-top: 155px;
-    }
-
-    nav {
-        padding: 10px;
-    }
-
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-    }
-
-    nav li {
-        min-width: 0;
-    }
-
-    nav a {
-        display: flex;
-        width: 100%;
-        min-height: 44px;
-
-        padding: 10px 6px;
-        gap: 7px;
-
-        font-size: 0.9rem;
-        text-align: center;
+        scroll-padding-top: 80px;
     }
 
     main {
         padding: 18px 12px;
     }
 
+    /* Hero */
+
     .hero {
         padding: 36px 18px;
         margin-bottom: 18px;
+
         border-radius: 14px;
     }
 
@@ -438,9 +568,12 @@ footer p {
         padding: 12px 16px;
     }
 
+    /* Content panels */
+
     .panel {
         margin-bottom: 18px;
         padding: 20px 16px;
+
         border-radius: 12px;
     }
 
@@ -453,23 +586,30 @@ footer p {
         font-size: 1rem;
     }
 
+    /* Images */
+
     .content-image {
         width: 100%;
         max-height: 300px;
+
         margin-bottom: 18px;
         border-radius: 9px;
     }
+
+    /* Education card stacks vertically */
 
     .school-card {
         flex-direction: column;
         align-items: center;
         gap: 16px;
+
         padding: 18px 14px;
         text-align: center;
     }
 
     .school-logo {
-        flex-basis: auto;
+        flex: 0 0 auto;
+
         width: 100px;
         height: 100px;
     }
@@ -477,6 +617,8 @@ footer p {
     .school-info {
         width: 100%;
     }
+
+    /* Footer */
 
     footer {
         padding: 22px 12px;
@@ -490,13 +632,22 @@ footer p {
 ======================================== */
 
 @media (max-width: 360px) {
-    nav a {
-        gap: 5px;
-        padding: 9px 4px;
-        font-size: 0.8rem;
+
+    .navbar {
+        padding: 10px 12px;
     }
 
-    nav a i {
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-links a {
+        padding: 10px 12px;
         font-size: 0.9rem;
     }
 
@@ -523,6 +674,7 @@ footer p {
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
