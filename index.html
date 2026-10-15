@@ -1,130 +1,107 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="style.css">
-    <!-- Makes the website work well on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO: Page title -->
     <title>Yvzern | Gamer Portfolio and Student Website</title>
 
-    <!-- SEO: Description shown by search engines -->
-    <meta
-        name="description"
-        content="Welcome to Yvzern's personal portfolio. Learn about Yvzern, favorite games, hobbies, and education at Qosmo International School."
-    >
+    <meta name="description"
+        content="Welcome to Yvzern's personal portfolio. Explore favorite games, hobbies, and education at Qosmo International School.">
 
-    <!-- SEO: Tell search engines what this page is about -->
-    <meta
-        name="keywords"
-        content="Yvzern, Yvzern portfolio, gamer portfolio, student portfolio, gaming, favorite games, Qosmo International School"
-    >
+    <meta name="keywords"
+        content="Yvzern, gamer portfolio, student portfolio, gaming, Qosmo International School">
 
-    <!-- Tell search engines to index the page -->
     <meta name="robots" content="index, follow">
-
-    <!-- Website author -->
     <meta name="author" content="Yvzern">
-
-    <!-- Browser / Apple title -->
+    <meta name="theme-color" content="#111827">
     <meta name="apple-mobile-web-app-title" content="Yvzern">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images.png">
-    <link rel="apple-touch-icon" type="image/png" href="images.png">
-
-    <!-- Open Graph: improves how your page looks when shared -->
     <meta property="og:title" content="Yvzern | Gamer Portfolio">
-    <meta
-        property="og:description"
-        content="Explore Yvzern's personal portfolio, favorite games, hobbies, and education."
-    >
+    <meta property="og:description"
+        content="Explore Yvzern's personal portfolio, favorite games, hobbies, and education.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images.png">
 
+    <link rel="icon" type="image/png" href="images.png">
+    <link rel="apple-touch-icon" href="images.png">
 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
-
+    <!-- NAVIGATION -->
     <nav aria-label="Main navigation">
-
         <ul>
-
             <li>
-
                 <a href="#home">
                     <i class="fa-solid fa-house" aria-hidden="true"></i>
                     Home
                 </a>
+            </li>
 
+            <li>
                 <a href="#introduction">
                     <i class="fa-solid fa-user" aria-hidden="true"></i>
                     Introduction
                 </a>
+            </li>
 
+            <li>
                 <a href="#game">
                     <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
                     Hobby
                 </a>
-
-                <a href="#education">
-                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                    Education
-                </a>
-
             </li>
 
+            <li>
+                <a href="#education">
+                    <i class="fa-solid fa-graduation-cap"
+                        aria-hidden="true"></i>
+                    Education
+                </a>
+            </li>
         </ul>
-
     </nav>
 
-
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
-
+    <!-- MAIN CONTENT -->
     <main>
 
         <!-- HOME -->
-
-        <header id="home">
+        <header id="home" class="hero">
+            <p class="eyebrow">PLAYER PROFILE: YVZERN</p>
 
             <h1>
-                Achievement Unlock! Welcome to Yvzern's World
+                Achievement Unlock!
+                <span>Welcome to Yvzern's World</span>
             </h1>
 
-            <p>
+            <p class="hero-description">
                 Welcome to my personal portfolio! I'm Yvzern, a student
                 who enjoys gaming and learning new things.
             </p>
 
+            <a href="#introduction" class="explore-button">
+                Explore My World
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
         </header>
 
-
         <!-- INTRODUCTION -->
-
-        <section id="introduction">
-
+        <section id="introduction" class="panel">
             <h2>
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
                 Introduction
             </h2>
 
             <img
+                class="content-image"
                 src="gamer.png"
                 alt="Yvzern gaming"
                 loading="lazy"
@@ -134,19 +111,17 @@
                 Hello! My name is Yvzern. I like to play games,
                 and I am a student who enjoys learning and having fun.
             </p>
-
         </section>
 
-
         <!-- HOBBY -->
-
-        <section id="game">
-
+        <section id="game" class="panel">
             <h2>
+                <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
                 My Favorite Game
             </h2>
 
             <img
+                class="content-image"
                 src="game.jpeg"
                 alt="Yvzern's favorite video game"
                 loading="lazy"
@@ -156,53 +131,43 @@
                 Gaming is one of my favorite hobbies. I enjoy
                 playing games and discovering new adventures.
             </p>
-
         </section>
 
-
         <!-- EDUCATION -->
-
-        <section id="education">
-
+        <section id="education" class="panel">
             <h2>
+                <i class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"></i>
                 Education
             </h2>
 
-            <div>
-
+            <div class="school-card">
                 <img
+                    class="school-logo"
                     src="Qosmo-logo-square.png"
                     alt="Qosmo International School logo"
                     loading="lazy"
                 >
 
-                <h3>
-                    Qosmo International School
-                </h3>
-
-                <p>
-                    Year 4 Student
-                </p>
-
+                <div class="school-info">
+                    <h3>Qosmo International School</h3>
+                    <p class="student-level">
+                        <i class="fa-solid fa-book-open"
+                            aria-hidden="true"></i>
+                        Year 4 Student
+                    </p>
+                </div>
             </div>
-
         </section>
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
+    <!-- FOOTER -->
     <footer>
-
         <p>
-            Yvzern Copyright &copy; 2026
+            Yvzern &copy; 2026. All rights reserved.
         </p>
-
     </footer>
 
 </body>
-
 </html>
